@@ -10,10 +10,19 @@ h1{
     
 }
 
-.s2{
-    background:url('../images/b.jpg');
+.sl1{
+    background:url('../images/Section1_Slide1.gif');
     background-size: cover;
     color: white;
+    
+    
+}
+
+.sl2{
+    background:url('../images/AboutMe.png');
+    background-size: cover;
+    color: white;
+    
     
 }
 
@@ -39,3 +48,28 @@ h1{
     .fp-slidesNav ul li a span{
       background: white;
     }
+
+    .fp-controlArrow {
+        position: absolute;
+        z-index: 2;
+        top: 99%;
+        cursor: pointer;
+        width: 01;
+        height: 01;
+        border-style: solid;
+        margin-top: -38px;
+        -webkit-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+    .fp-arrow.fp-next {
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent #fff;
+    }
+
+    .fp-arrow.fp-prev {
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #fff transparent transparent;
+    }
+    
+    
