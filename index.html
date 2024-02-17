@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saumil Jain's Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.22/fullpage.min.css" integrity="sha512-i5IHYtHBVvbgT6M4ltVKNqF7fh/MTVfGh3ilW1gxxgmlMocsl8aYz28aF0Iph+ceUpun06UW9CpExog9qXqFKQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href ="css/main.css">
+</head>
+<body>
+    <style>
+        /* Add your CSS styles here */
+        body {
+          font-family: Helvetica, Arial, sans-serif; /* Set the default font for the entire document */
+        }
+        .container {
+          display: flex;
+          align-items: flex-start; /* Adjust alignment to the top */
+        }
+        .image {
+          width: 200px; /* Adjust the width as needed */
+          margin-right: 20px;
+        }
+        .bio {
+          flex: 1;
+          padding: 20px; /* Add padding to the text on the left */
+        }
+        .bio h2 {
+          text-align: left; /* Align heading to the left */
+          font-size: 24px; /* Editable font size for heading */
+        }
+        .bio p {
+          text-align: justify; /* Align paragraphs to justify */
+          font-size: 16px; /* Editable font size for paragraphs */
+          max-width: calc(55% - 220px); /* Adjust maximum width to prevent overlap with the image */
+          word-wrap: break-word; /* Ensure text wraps to the next line */
+        }
+        .links {
+          text-align: left; /* Align links to the left */
+          margin-top: 10px;
+        }
+        .resume-link, .linkedin-link {
+          display: block; /* Display links as block elements */
+          font-size: 14px; /* Editable font size for links */
+          margin-bottom: 5px; /* Add margin between links */
+        }
+        .resume-link img, .linkedin-link img {
+      height: 2em; /* Limit height of icons to match font size */
+      width: auto; /* Set width to auto for responsive resizing */
+      margin-right: 5px; /* Add spacing between icon and text */
+    }
+      </style>
+
+    <div id="fullPage">
+        <div class="section s1">
+        
+            <div class="container">
+                
+                <div class="bio">
+                  <h2>About Me</h2>
+                  <p>Add your biography here. You can mention your skills, interests, experiences, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <div class="links">
+                    <a href="images/SaumilJain_Resume.pdf" class="resume-link"><img src="images/icon_pdf.png" alt="PDF Icon"> Download Resume</a>
+                    <a href="https://www.linkedin.com/in/saumil-jain/" class="linkedin-link"><img src="images/icon_linkedin.png" alt="LinkedIn Icon"> LinkedIn Profile</a>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+
+        <div class="section s2">
+        <h1>The second section</h1>
+        <div class="slide">
+            <h1>The first slide</h1>
+        </div>
+        
+        <div class="slide">
+            <h1>The second slide</h1>
+        </div>
+
+        <div class="slide">
+            <h1>The third slide</h1>
+        </div>
+
+        </div>
+        <div class="section s3">
+            <div class="slide">
+                <h1>The first slide</h1>
+            </div>
+            
+            <div class="slide">
+                <h1>The second slide</h1>
+            </div>
+    
+            <div class="slide">
+                <h1>The third slide</h1>
+            </div>
+        <h1>The third section</h1>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.22/fullpage.min.js" integrity="sha512-yHHLi2ZwgtW9QNVZd0asqMyWGJ6Kx73ijKlGWSi3MwYFB5ZzOJV8wPtopKr6muHk5SERgF3OB/2dZj3StlI34w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        new fullpage('#fullPage',{
+            autoScrolling: true,
+            navigation: true,
+            navigationTooltips: ['About Me','Series Hybrid Powertrain','Vehicle Motion Controller'],
+            showActiveTooltip: true,
+            controlArrows: false,
+            slidesNavigation: true,
+            continuousHorizontal: false,
+            dragAndMove: true
+        })
+        
+    </script>
+
+</body>
+</html>

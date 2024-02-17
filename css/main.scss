@@ -1,0 +1,41 @@
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.s1{
+    background:url('../images/AboutMe.png');
+    background-size: cover;
+    color: white;
+    background-position-y: -22px;
+    
+}
+
+.s2{
+    background:url('../images/b.jpg');
+    background-size: cover;
+    color: white;
+    
+}
+
+.s3{
+    background:url('../images/c.jpg');
+    background-size: cover;
+    color: black;
+    h1{
+        text-align: left;
+        margin-left: 2em;
+        font-size: 10em;
+    }
+    
+}
+.fp-slidesNav{
+    position: absolute;
+    z-index: 4;
+    left: 0%;
+    opacity: 1;
+    margin-left: 50% !important;
+    }
+    #fp-nav ul li a span, 
+    .fp-slidesNav ul li a span{
+      background: white;
+    }
