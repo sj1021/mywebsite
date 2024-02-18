@@ -23,23 +23,37 @@ h1 {
 }
 
 .sl3 {
-  background: url("../images/Section1_Slide3.png");
+  background-color: black;
   background-size: cover;
   color: white;
 }
 
 .sl4 {
-  background: url("../images/Section1_Slide3.png");
+  background: url("../images/Section1_Slide4.gif");
   background-size: cover;
   color: white;
 }
 
+.sl5 {
+  background-color: black;
+  color: white;
+}
+
 .s3 {
-  background: url("../images/c.jpg");
-  background-size: cover;
-  color: black;
+  background-color: black;
+  color: white;
 }
 .s3 h1 {
+  text-align: left;
+  margin-left: 2em;
+  font-size: 10em;
+}
+
+.s4 {
+  background-color: black;
+  color: white;
+}
+.s4 h1 {
   text-align: left;
   margin-left: 2em;
   font-size: 10em;
@@ -70,4 +84,74 @@ h1 {
 .fp-arrow.fp-prev {
   border-width: 10px 10px 10px 0;
   border-color: transparent #fff transparent transparent;
+}
+
+.slide {
+  position: relative;
+}
+
+.video-container {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  /* Adjust width and height of the logo as needed */
+  width: 400px;
+  height: auto;
+}
+
+.sl3img {
+  position: absolute;
+  top: 20%;
+  right: 100px;
+  /* Adjust width and height of the logo as needed */
+  width: 1000px;
+  height: auto;
+}
+
+.video-container2 {
+  position: absolute;
+  top: 80%;
+  right: 10%;
+  transform: translateY(-50%);
+}
+
+.imagesl3_1_1 {
+  position: absolute;
+  top: 15%;
+  Right: 10%;
+  width: 850px;
+  height: auto;
+}
+
+.imagesl3_1_2 {
+  position: absolute;
+  top: 15%;
+  Right: 10%;
+  width: 850px;
+  height: auto;
+}
+
+.imagesl3_3_1 {
+  position: absolute;
+  background-color: #fff;
+  top: 25%;
+  Right: 10%;
+  width: 850px;
+  height: auto;
+}
+
+.imagesl4_1_1 {
+  position: absolute;
+  background-color: transparent;
+  top: 25%;
+  Right: 10%;
+  width: 850px;
+  height: auto;
 }/*# sourceMappingURL=main.css.map */
