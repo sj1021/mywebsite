@@ -39,12 +39,19 @@
           text-align: left; /* Align links to the left */
           margin-top: 10px;
         }
-        .resume-link, .linkedin-link {
+        .resume-link, .linkedin-link,.email-link {
           display: block; /* Display links as block elements */
           font-size: 14px; /* Editable font size for links */
-          margin-bottom: 5px; /* Add margin between links */
+          margin-bottom: 5px;
+          color: white; /* Set text color to white */
+    text-decoration: none; /* Remove underline by default */ /* Add margin between links */
         }
-        .resume-link img, .linkedin-link img {
+        .resume-link:hover,
+.linkedin-link:hover,
+.email-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+        .resume-link img, .linkedin-link img, .email-link img {
       height: 2em; /* Limit height of icons to match font size */
       width: auto; /* Set width to auto for responsive resizing */
       margin-right: 5px; /* Add spacing between icon and text */
@@ -68,6 +75,25 @@
     
 
       </style>
+      <script>
+  function fadeInOut() {
+    var firstImage = document.getElementById('first-image');
+    var secondImage = document.getElementById('second-image');
+    firstImage.style.opacity = 0;
+    secondImage.classList.remove('hidden');
+    secondImage.style.opacity = 1;
+    setTimeout(function() {
+      secondImage.style.opacity = 0;
+      firstImage.classList.remove('hidden');
+      firstImage.style.opacity = 1;
+      setTimeout(fadeInOut, 3000);
+    }, 3000); 
+  }
+
+  window.onload = function() {
+    fadeInOut(); // Start the fade effect when the window loads
+  }
+      </script>
 
     <div id="fullPage">
         <div class="section s1">
@@ -76,11 +102,17 @@
                 
                 <div class="bio">
                   <h2>About Me</h2>
-                  <p>Add your biography here. You can mention your skills, interests, experiences, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Hello! I'm Saumil Jain, a huge automotive enthusiast who loves working on Electric Powertrains. Currently, I'm pursuing my master's in Automotive Engineering at Clemson University, where I'm also interning at Deep Orange, Clemson University's vehicle prototyping program. Here, I'm responsible for developing a series hybrid powertrain for a high-speed rescue vehicle.</p>
+
+<p>I completed my undergraduate studies at Pune University in India, where I was actively involved in FSAE. With my team, I won multiple awards and successfully led the transition from a combustion to an electric team.</p>
+
+<p>I created this website to showcase my projects. Please scroll down and feel free to reach out to me if you have any suggestions or would like to collaborate.</p>
                   <div class="links">
                     <a href="images/SaumilJain_Resume.pdf" class="resume-link"><img src="images/icon_pdf.png" alt="PDF Icon"> Download Resume</a>
-                    <a href="https://www.linkedin.com/in/saumil-jain/" class="linkedin-link"><img src="images/icon_linkedin.png" alt="LinkedIn Icon"> LinkedIn Profile</a>
-                  </div>
+<a href="https://www.linkedin.com/in/saumil-jain/" class="linkedin-link"><img src="images/icon_linkedin.png" alt="LinkedIn Icon"> LinkedIn Profile</a>
+<a href="mailto:saumilj@clemson.edu" class="email-link"><img src="images/icon_email.png" alt="email Icon"> E-Mail</a>
+             
+</div>
                 </div>
               </div>
 
@@ -88,8 +120,10 @@
 
         <div class="section s2">
           <div class="slide sl1">
-          <div class="container">
-                
+            <a href="https://cuicardeeporange.com/">
+            <img src = "images/DeepOrange15_Logo.png" class="logo">
+            </a>
+            <div class="container">
             <div class="bio">
               <h2>Developing a Series Hybrid Powertrain from scratch</h2>
               <p>Add your biography here. You can mention your skills, interests, experiences, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -99,36 +133,105 @@
                     
          
         <div class="slide sl2">
+          <a href="https://cuicardeeporange.com/">
+            <img src = "images/DeepOrange15_Logo.png" class="logo">
+          </a>
           <div class="bio">
-            <h2>Comparing Hybrid options over a drivecycle</h2>
+            <h2>Comparing Hybrid Options over a Drivecycle</h2>
             <p>Add your biography here. You can mention your skills, interests, experiences, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         </div>
         <div class="slide sl3">
+          <a href="https://cuicardeeporange.com/">
+            <img src = "images/DeepOrange15_Logo.png" class="logo">
+          </a>
+          <img src = "images/Section1_Slide3.png" class ="sl3img">
           <div class="biosl3">
-            <h2>Sizing components for a series hybrid that minimize lap time</h2>
+            <h2>Sizing Components to Minimize Lap Time</h2>
             <p>Add your biography here. You can mention your skills, interests, experiences, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         </div>
         <div class="slide sl4">
-          <h1>The first slide</h1>
+          <a href="https://cuicardeeporange.com/">
+            <img src = "images/DeepOrange15_Logo.png" class="logo">
+          </a>
+          <div class="bio">
+            <h2>Building a Powertrain Controller</h2>
+            <p>Add your biography here. You can mention your skills, interests, experiences, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+      </div>
+      <div class="slide sl5">
+        <a href="https://cuicardeeporange.com/">
+          <img src = "images/DeepOrange15_Logo.png" class="logo">
+        </a>
+        <div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/DCkIEcd8KT8?si=AXWlNUEX_azDuVcF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="bio">
+          <h2>Hardware in Loop Testing</h2>
+          <p>As our components start to come in, we are currently in the process of setting up low level controllers and testing them using New Eagle's Rapid Prototyping product suite. In this GIF you can see using Raptor Cal we are spoofing the throttle using a poorman's DAC,i.e a RC low pass filter on a PWM signal. We are reading the engine speed that is published on the CAN bus. Now the next steps are to assemble the generators and battery and to test our energy management strategy. Stay Tuned!</p>
+        </div>
       </div>
         </div>
         <div class="section s3">
-            <div class="slide">
-                <h1>The first slide</h1>
+          <div class="slide sl3_1">
+            <div class="video-container2">
+              <iframe width="448" height="252" src="https://www.youtube.com/embed/-3aHWvhB948?si=Wf-H9yz2ypT9aFqd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>  
+              <div id="image-container">
+              <img id ="first-image" src = "images/Section2_Slide2_1.png" class="imagesl3_1_1">
+              <img id ="second-image" src = "images/Section2_Slide2_3.png" class="imagesl3_1_2">
+              </div>
+              <div class="bio">
+                <h2>Safe Mode Motion Controller for a Tracked Vehicle</h2>
+                <p>Working under the VIPR-GS research group at Clemson University, I was tasked with creating a motion controller that allows for precise control in lateral and longitudnal direction.</p>
+                <p> To achieve this, a sensitivity gain was added to the joystick inputs. The inputs were then converted into left and right track velocities. This was transformed into longitudnal velocity and yaw rate which was then fed into a PID controller after rate limiting. </p>
+                <p> In order to achieve fast response times we made use of a feedforward with a sigmoid function to overcome stiction at zero velocities.</p>
+              </div>
             </div>
             
-            <div class="slide">
-                <h1>The second slide</h1>
+            <div class="slide sl3_2">
+              <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4ZrTwSPwY4?si=XccP8okW22hmyMv4&amp;start=94" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                </div>  
+                <div class="bio">
+                  <h2>Hardware in Loop Testing of an Electric Motor</h2>
+                  <p>As part of a group project, I created a Hardware-in-the-Loop (HIL) test bench for the Curtis AC-09 electric motor capable of simulating any drive cycle for a golf cart-type electric vehicle. This was accomplished using a dSPACE microAutoBox controller in conjunction with a Curtis 1314 programmer.</p>
+                  <p>Two Curtis AC-09 motors were mechanically coupled: one operated in torque mode, applying torque based on road load calculations for the vehicle, while the other operated in speed mode to ensure that the desired speed, as per the drive cycle, was maintained. We utilized a 48V battery setup, through which one motor was drawing power and regenerating it back through the other motor, accounting for efficiency losses.</p>
+                 </div>
             </div>
     
-            <div class="slide">
-                <h1>The third slide</h1>
+            <div class="slide sl3_3">
+              <img src = "images/Section2_Slide3_1.png" class ="imagesl3_3_1">
+              <div class="bio">
+                <h2>Model Predictive Controller for an Electrically Assisted Turbocharger</h2>
+                <p>As part of a collaborative group project focused on optimizing engine performance, we developed a model predictive controller using Simulink. Our approach involved creating a simple forward Euler model to accurately describe the behavior of a turbocharged engine. Additionally, we integrated a motor torque add/subtract feature on the turbocharger shaft, leveraging the assumption that the electric motor's dynamics are significantly faster than the air path dynamics.</p>
+                <p>Subsequently, we rigorously tested this controller using MATLAB's reference Simulink vehicle model and achieved satisfactory results. Our utilization of the forward discrete Euler method played a pivotal role in reducing the time required to find an optimized solution, enhancing efficiency and effectiveness.</p>               
+                <p>During our optimization process, we encountered challenges such as local minima when using MATLAB's fmincon function. To address this issue, we implemented a particle swarm search prior to initiating the fmincon algorithm. This additional step proved instrumental in mitigating the occurrence of local minima and improving the overall optimization process.</p>
+                               </div>
             </div>
-        <h1>The third section</h1>
+            <div class="slide sl3_4">
+              <img src = "images/Section2_Slide4_1.png" class ="imagesl3_3_1">
+              <div class="bio">
+                <h2>Microgrid Planning Under Uncertainties Using Scenario MPC</h2>
+                <p>Microgrids have shown promise to curb disturbances to the main power grid or allow smaller hard communities to operate islanded from the main grid, thereby increasing the quality of life for the inhabitants. However, control of the microgrid has proven to be a challenging task in either scenario. Due to their much smaller inertia, microgrids are much more susceptible to power fluctuations within the grid. This has not stopped people from trying to develop controllers that can still operate these grids in an optimal manner.</p>
+                <p>In this work, we present a scenario-based stochastic model predictive control algorithm to plan the grid operating set points over a 24-hour window. Our model guarantees constraint satisfaction with a probability of 70%. This limitation is attributed to time and computational constraints and could potentially be improved with more powerful computing resources. Additionally, we demonstrate that by simply tuning two parameters in the cost function, we can shift the grid from net deficit to net surplus for the case of an islanded grid with no fallback supply.</p>
+              </div>
+            </div>
         </div>
+        <div class="section s4">
+          <div class="slide sl4_1">
+            <img src = "images/Section3_Slide1_1.png" class ="imagesl4_1_1">
+            <div class="bio">
+              <h2>Formula SAE</h2>
+              <p>Being a huge motorsports enthusiast and looking to learn more about how to be a powertrain engineer, I quickly jumped on the opportunity of joining my university's Formula SAE (FSAE) team in my junior (first) year of undergraduate studies. My work ethic was hugely influenced by FSAE, and working with people who share the same passion and a huge amount of knowledge was a brilliant experience for me.</p>
+              <p>During my senior year, I led the team to switch to an electric powertrain. Along with the team, I developed the entire electric powertrain. We had to learn everything about high-voltage systems and their safety, as well as the different components required to have a working electric traction system.</p>
+              <p>One major discussion point involved deciding between a 100V or 400V architecture. We stuck with a 100V architecture because of the availability of components and the lower cost.</p>
+              <p>We had to build our own battery pack. We chose Samsung 30Q cells because of their power and energy density. Since we were new to the electric competition context, we decided to go with the Orion BMS2.</p>
+                            </div>
+          </div>
+      </div>
     </div>
+</div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.22/fullpage.min.js" integrity="sha512-yHHLi2ZwgtW9QNVZd0asqMyWGJ6Kx73ijKlGWSi3MwYFB5ZzOJV8wPtopKr6muHk5SERgF3OB/2dZj3StlI34w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -136,7 +239,7 @@
         new fullpage('#fullPage',{
             autoScrolling: true,
             navigation: true,
-            navigationTooltips: ['About Me','Series Hybrid Powertrain','Vehicle Motion Controller'],
+            navigationTooltips: ['About Me','DO15','Grad School Projects','FSAE'],
             showActiveTooltip: true,
             controlArrows: true,
             slidesNavigation: true,
