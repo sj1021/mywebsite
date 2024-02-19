@@ -10,69 +10,7 @@
 <body>
     <style>
         /* Add your CSS styles here */
-        body {
-          font-family: Helvetica, Arial, sans-serif; /* Set the default font for the entire document */
-        }
-        .container {
-          display: flex;
-          align-items: flex-start; /* Adjust alignment to the top */
-        }
-        .image {
-          width: 200px; /* Adjust the width as needed */
-          margin-right: 20px;
-        }
-        .bio {
-          flex: 1;
-          padding: 20px; /* Add padding to the text on the left */
-        }
-        .bio h2 {
-          text-align: left; /* Align heading to the left */
-          font-size: 24px; /* Editable font size for heading */
-        }
-        .bio p {
-          text-align: justify; /* Align paragraphs to justify */
-          font-size: 16px; /* Editable font size for paragraphs */
-          max-width: calc(55% - 220px); /* Adjust maximum width to prevent overlap with the image */
-          word-wrap: break-word; /* Ensure text wraps to the next line */
-        }
-        .links {
-          text-align: left; /* Align links to the left */
-          margin-top: 10px;
-        }
-        .resume-link, .linkedin-link,.email-link {
-          display: block; /* Display links as block elements */
-          font-size: 14px; /* Editable font size for links */
-          margin-bottom: 5px;
-          color: white; /* Set text color to white */
-    text-decoration: none; /* Remove underline by default */ /* Add margin between links */
-        }
-        .resume-link:hover,
-.linkedin-link:hover,
-.email-link:hover {
-    text-decoration: underline; /* Add underline on hover */
-}
-        .resume-link img, .linkedin-link img, .email-link img {
-      height: 2em; /* Limit height of icons to match font size */
-      width: auto; /* Set width to auto for responsive resizing */
-      margin-right: 5px; /* Add spacing between icon and text */
-    }
-    .biosl3 {
-          flex: 1;
-          padding: 20px; /* Add padding to the text on the left */
-        }
-        .biosl3 h2 {
-          text-align: left; /* Align heading to the left */
-          font-size: 24px; 
-          max-width: calc(50% - 220px);/* Editable font size for heading */
-        }
-        .biosl3 p {
-          text-align: justify; /* Align paragraphs to justify */
-          font-size: 16px; /* Editable font size for paragraphs */
-          max-width: calc(50% - 220px); /* Adjust maximum width to prevent overlap with the image */
-          word-wrap: break-word; /* Ensure text wraps to the next line */
-        }
-
-    
+       
 
       </style>
       <script>
@@ -152,9 +90,8 @@
           <img src = "images/Section1_Slide3.png" class ="sl3img">
           <div class="biosl3">
             <h2>Sizing Components to Minimize Lap Time</h2>
-            <p>Once a series hybrid powertrain was selected, the next important step was to select the motors, generators, engine, and battery pack. The benefit of a hybrid powertrain in a power application will only be significant if the engine acts as an energy-dense source and the battery acts as a power-dense source. Since the battery is a buffer, we want it to be adequately sized such that we never derate during the drive cycle. Based on the requirements, derates, and mass, we were able to zero in on a battery capacity and engine power specification.</p>
-            <p>Since different options of components will have different specifications and will affect the drive cycle, we developed a lap time simulator that, based on the specifications, gave a redefined drive cycle (speed vs. time).</p>            
-            <p>Using data-based modeling methods, we developed a series hybrid powertrain model. This helped us to analyze the fuel consumption for a certain powertrain combination. In the end, we ran 40 different simulations to finalize our powertrain component selection.</p>            
+            <p>The next important step was to select the motors, generators, engine, and battery pack. The benefit of a hybrid powertrain in a power application will only be significant if the engine acts as an energy-dense source and the battery acts as a power-dense source. Since the battery is a buffer, we want it to be adequately sized such that we never derate during the drive cycle. Based on the requirements, derates, and mass, we were able to zero in on a battery capacity and engine power specification.</p>
+            <p>Since different options of components will have different specifications we developed a lap time simulator that, based on the specifications, gave a redefined drive cycle (speed vs. time).Using data-based modeling methods, we developed a powertrain model. This helped us to analyze the fuel consumption for a certain powertrain combination. In the end, we ran 40 different simulations to finalize our powertrain component selection.</p>            
             <ul>
               <li>Engine: Cummins R2.8L </li>
               <li>Generators: YASA P400RHC</li>
