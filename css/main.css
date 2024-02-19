@@ -122,34 +122,36 @@ h1 {
   transform: translateY(-50%);
 }
 
-      .imagesl3_1_1 {
-        position: absolute;
-        top: 15%;
-        Right: 5%;
-        width: 650px;
-        height: auto;
-      }
-      .imagesl3_1_2 {
-        position: absolute;
-        top: 15%;
-        Right: 5%;
-        width: 650px;
-        height: auto;
-      }
+.imagesl3_1_1 {
+  position: absolute;
+  top: 15%;
+  Right: 5%;
+  width: 650px;
+  height: auto;
+}
 
-      .imagesl3_3_1 {
-        position: absolute;
-        background-color: #fff;
-        top: 25%;
-        Right: 10%;
-        width: 650px;
-        height: auto;
-      }
+.imagesl3_1_2 {
+  position: absolute;
+  top: 15%;
+  Right: 5%;
+  width: 650px;
+  height: auto;
+}
+
+.imagesl3_3_1 {
+  position: absolute;
+  background-color: #fff;
+  top: 25%;
+  Right: 5%;
+  width: 650px;
+  height: auto;
+}
+
 .imagesl4_1_1 {
   position: absolute;
   background-color: transparent;
   top: 10%;
-  Right: 10%;
+  Right: 5%;
   width: 700px;
   height: auto;
 }/*# sourceMappingURL=main.css.map */
