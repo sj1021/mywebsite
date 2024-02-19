@@ -126,8 +126,10 @@
             <div class="container">
             <div class="bio">
               <h2>Developing a Series Hybrid Powertrain from scratch</h2>
-              <p>Add your biography here. You can mention your skills, interests, experiences, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
+              <p>Deep Orange is a 2-year educational design process, where an industrial sponsor provides a real-world problem to the students. Deep Orange 15 is a high-speed off-road autonomous rescue vehicle, loosely based on a King of the Hammer racecar. Our sponsor is looking into the electrification of their fleet, and hence a significant deliverable is to come up with more efficient powertrains.</p>
+              <p>The challenge is to find a powertrain solution that is robust in austere environments, to come up with requirements that fit the goals of our sponsor, and to fulfill them. The motorsport element also makes the control of the powertrain very challenging.</p>    
+              <p>In the forthcoming slides, you will see the development of DO15's powertrain: why we chose a series hybrid, how we sized our components, how we developed the powertrain controller, and lastly how we tested it against the requirements.</p>
+                         </div>
           </div>
         </div>
                     
@@ -138,17 +140,30 @@
           </a>
           <div class="bio">
             <h2>Comparing Hybrid Options over a Drivecycle</h2>
-            <p>Add your biography here. You can mention your skills, interests, experiences, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
+            <p>There are different hybrid options available. However, based on our requirements of stationary power export and electric-only modes, the possible solutions were a P2 hybrid or a Series Hybrid. Using available GPS data of King Of The Hammer race tracks, a drive cycle was developed.</p>
+            <p>Using the drive cycle data, we ran simulations comparing the series hybrid with a P2 parallel hybrid. In series hybrids, the mechanically decoupled nature means that regardless of the wheel RPM, the engine can charge the battery at desired power levels. This was evident in the drive cycle simulations where high power draws occurred; the parallel hybrid would have a completely discharged battery and hence would run in a 'derated' state.</p>  
+            <p>This ability of the series hybrid meant that it would provide better performance, even with conversion losses. Therefore, it was chosen as the best solution for our use case.</p>
+                      </div>
         </div>
         <div class="slide sl3">
           <a href="https://cuicardeeporange.com/">
             <img src = "images/DeepOrange15_Logo.png" class="logo">
           </a>
           <img src = "images/Section1_Slide3.png" class ="sl3img">
-          <div class="biosl3">
+          <div class="bio">
             <h2>Sizing Components to Minimize Lap Time</h2>
-            <p>Add your biography here. You can mention your skills, interests, experiences, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Once a series hybrid powertrain was selected, the next important step was to select the motors, generators, engine, and battery pack. The benefit of a hybrid powertrain in a power application will only be significant if the engine acts as an energy-dense source and the battery acts as a power-dense source. Since the battery is a buffer, we want it to be adequately sized such that we never derate during the drive cycle. Based on the requirements, derates, and mass, we were able to zero in on a battery capacity and engine power specification.</p>
+            <p>Since different options of components will have different specifications and will affect the drive cycle, we developed a lap time simulator that, based on the specifications, gave a redefined drive cycle (speed vs. time).</p>            
+            <p>Using data-based modeling methods, we developed a series hybrid powertrain model. This helped us to analyze the fuel consumption for a certain powertrain combination. In the end, we ran 40 different simulations to finalize our powertrain component selection.</p>            
+            <ul>
+              <li>Engine: Cummins R2.8L </li>
+              <li>Generators: YASA P400RHC</li>
+              <li>Motors: YASA P400RHC</li>
+              <li>Inverters: Cascadia CM200</li>
+              <li>Battery: 20 kWh 11C Discharge </li>
+            </ul>
+            <p>We have also selected a (400V>12V)DC/DC converter, DC/AC converter for export and charging functions.
+            
           </div>
         </div>
         <div class="slide sl4">
@@ -157,7 +172,10 @@
           </a>
           <div class="bio">
             <h2>Building a Powertrain Controller</h2>
-            <p>Add your biography here. You can mention your skills, interests, experiences, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>With 19 components to control in total, and 11 members working in the powertrain team, the control software architecture has to be very standardised so that all the software owners develop something that is cohesive. 
+            <p>The template architecture was developed in a manner that simplifies going from SIL to HIL. Just by replacing the Input,Param and Output blocks, we run the code on Simulink itself. This helps us to iron out software bugs very early and saves the time of compiling and flashing.</p>
+            <p>An example template of the Energy Management subystem is shown and at the end a summary of the control strategy is shown. The vehicle software has 14 such subsystem libraries. All signals of the subsystems are published on a matlab bus object and hence available to all inddividual subsystems.
+            <p>Matlab's code generation was used to compile code that was then flashed onto a Rapid Control Prototyping module called raptor provided by New Eagle.</p>
           </div>
       </div>
       <div class="slide sl5">
