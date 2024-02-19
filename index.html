@@ -10,7 +10,70 @@
 <body>
     <style>
         /* Add your CSS styles here */
-       
+        body {
+    font-family: Helvetica, Arial, sans-serif; /* Set the default font for the entire document */
+  }
+  .container {
+    display: flex;
+    align-items: flex-start; /* Adjust alignment to the top */
+  }
+  .image {
+    width: 200px; /* Adjust the width as needed */
+    margin-right: 20px;
+  }
+  .bio {
+    flex: 1;
+    padding: 20px; /* Add padding to the text on the left */
+  }
+  .bio h2 {
+    text-align: left; /* Align heading to the left */
+    font-size: 24px; /* Editable font size for heading */
+  }
+  .bio p {
+    text-align: justify; /* Align paragraphs to justify */
+    font-size: 16px; /* Editable font size for paragraphs */
+    max-width: calc(55% - 220px); /* Adjust maximum width to prevent overlap with the image */
+    word-wrap: break-word; /* Ensure text wraps to the next line */
+  }
+  .links {
+    text-align: left; /* Align links to the left */
+    margin-top: 10px;
+  }
+  .resume-link, .linkedin-link,.email-link {
+    display: block; /* Display links as block elements */
+    font-size: 14px; /* Editable font size for links */
+    margin-bottom: 5px;
+    color: white; /* Set text color to white */
+text-decoration: none; /* Remove underline by default */ /* Add margin between links */
+  }
+  .resume-link:hover,
+.linkedin-link:hover,
+.email-link:hover {
+text-decoration: underline; /* Add underline on hover */
+}
+  .resume-link img, .linkedin-link img, .email-link img {
+height: 2em; /* Limit height of icons to match font size */
+width: auto; /* Set width to auto for responsive resizing */
+margin-right: 5px; /* Add spacing between icon and text */
+}
+.biosl3 {
+    flex: 1;
+    padding: 20px; /* Add padding to the text on the left */
+  }
+  .biosl3 h2 {
+    text-align: left; /* Align heading to the left */
+    font-size: 24px; 
+    max-width: calc(55% - 220px);/* Editable font size for heading */
+  }
+  .biosl3 p {
+    text-align: justify; /* Align paragraphs to justify */
+    font-size: 16px; /* Editable font size for paragraphs */
+    max-width: calc(55% - 220px); /* Adjust maximum width to prevent overlap with the image */
+    word-wrap: break-word; /* Ensure text wraps to the next line */
+  }
+
+
+
 
       </style>
       <script>
